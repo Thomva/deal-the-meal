@@ -1,0 +1,187 @@
+.modalContainer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    max-height: 600px;
+    width: calc(100vw - 100px);
+    height: calc(100vh - 100px);
+    background-color: $color-white;
+    overflow: hidden;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    border-radius: 4px;
+
+    & .input {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+
+        &--message {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__subTitle {
+        &--message {
+            width: fit-content;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 272px;
+
+        &--review {
+            width: 380px;
+        }
+    }
+
+    &__top {
+        position: relative;
+
+        &--message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 140px;
+        }
+    }
+
+    &__mapContainer {
+        position: absolute;
+        top: 80px;
+        left: -50%;
+        width: 200%;
+        height: 200px;
+    }
+
+    &__inputContainer {
+        position: relative;
+        margin-bottom: 40px;
+
+        & .ratingStars {
+            width: 100%;
+            height: 56px;
+            grid-template-rows: 60px;
+            grid-template-columns: repeat(5, min-content);
+            justify-content: space-between;
+            
+            & > * {
+                cursor: pointer;
+                width: fit-content;
+                
+                & > * {
+                    width: 60px;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        & .input {
+            max-width: none;
+
+            &__area {
+                height: 140px;
+                width: 100%;
+            }
+        }
+
+        &--last {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__error {
+        position: absolute;
+        left: calc(100% + 40px);
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        top: 0;
+    }
+
+    &__errorIcon {
+        width: 6px;
+        padding: 0;
+        padding-left: 10px;
+    }
+
+    &__errorMessage {
+        height: fit-content;
+        width: max-content;
+        max-width: 200px;
+        color: map-get($map: $theme-colors, $key: 'primary-dark');
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        font-weight: bold;
+    }
+
+    &__underText {
+        margin-top: 20px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 20px;
+    }
+
+    &__bottom {
+        margin-top: auto;
+
+        &--review {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__bottomButtons {
+
+        & .button {
+            margin-right: 20px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 20px;
+    }
+
+    &__textline {
+        display: flex;
+    }
+    
+    &--hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modalBG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: map-get($map: $theme-colors, $key: 'dark');
+    opacity: .5;
+}

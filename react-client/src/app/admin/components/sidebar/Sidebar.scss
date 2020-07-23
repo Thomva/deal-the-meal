@@ -1,0 +1,81 @@
+@import '../../../_sass/abstracts/index';
+
+$sidebar-transition: all 268ms ease-in-out 0s;
+$sidebar-width: 286px;
+$sidebar-padding: 16px;
+
+.is-minimized {
+    .sidebar {
+        width: 0;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1030;
+    height: 100vh;
+    width: $sidebar-width;
+    overflow: hidden;
+
+    background-color: #3c4b64;
+    color: #fff;
+
+    transition: $sidebar-transition;
+
+    &-brand {
+        background: rgba(0,0,21,.2);
+
+        display: flex;
+        height: 56px;
+        flex: 0 0 56px;
+        align-items: center;
+        justify-content: center;
+
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            
+        }
+
+        &-link {
+            padding: $sidebar-padding;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            text-decoration: none;
+            color: rgba(255,255,255,.8);
+
+            transition: $sidebar-transition;
+
+            &:hover {
+                background: #321fdb;
+                text-decoration: none;
+                color: rgba(255,255,255,1);
+            }
+
+            &.active {
+                color: #fff;
+                background: rgba(255,255,255,.05);
+            }
+
+            & > i {
+                width: ($sidebar-padding * 2);
+            }
+        }
+    }
+}

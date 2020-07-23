@@ -1,0 +1,77 @@
+.clickableText {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: map-get($font-sizes, 'normal');
+    color: map-get($theme-colors, 'dark');
+    height: 26px;
+    text-align: center;
+    padding: 2px 8px;
+    z-index: 1;
+    width: fit-content;
+    cursor: pointer;
+    
+    &--nav {
+        margin: 0 20px;
+    }
+
+    &--right {
+        margin-left: auto;
+    }
+
+    &--mt {
+        margin-top: 20px;
+    }
+    
+    &--ml {
+        margin-left: 10px;
+    }
+    
+    &::before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        background-color: map-get($theme-colors, 'secondary');
+        left: 0;
+        height: 100%;
+        width: 16px;
+        border-radius: 8px;
+
+        transition: width .3s ease-out;
+    }
+
+    &:hover {
+        color: map-get($theme-colors, 'dark');
+        text-decoration: none;
+
+        &::before {
+            width: 100%;
+        }
+    }
+    
+    &--active {
+        font-weight: 500;
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &--dark {
+        &::before {
+            background-color: $white;
+        }
+    }
+
+    &--darkLight {
+        color: $color-white;
+
+        &::before {
+            background-color: map-get($theme-colors, 'primary-dark');
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}

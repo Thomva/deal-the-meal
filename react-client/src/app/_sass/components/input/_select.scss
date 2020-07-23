@@ -1,0 +1,67 @@
+.select {
+    position: relative;
+    width: 200px;
+    height: fit-content;
+    font-size: map-get($map: $font-sizes, $key: 'normal');
+    user-select: none;
+    z-index: 2;
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 30px;
+        color: map-get($map: $theme-colors, $key: 'primary-dark');
+
+        & .icon {
+            width: 6px;
+            padding: 0;
+            margin-right: 10px;
+            pointer-events: none;
+        }
+
+        &--hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__optionContainer {
+        position: absolute;
+        top: 0;
+        color: $color-white;
+        width: 100%;
+        border-radius: 2px;
+        background-color: $color-white;
+        border: 2px solid $color-white;
+        
+        &--hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+    }
+    
+    &__options {
+        max-height: 300px;
+        overflow-y: auto;
+        
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+
+    &__option {
+        background-color: map-get($map: $theme-colors, $key: 'primary');
+        display: flex;
+        align-items: center;
+        height: 30px;
+        padding-left: 10px;
+        margin-bottom: 2px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

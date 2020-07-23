@@ -1,0 +1,79 @@
+.home {
+}
+
+.home-full,
+.home-suggestions,
+.home-howto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.home-full {
+    height: calc(100vh - 88px);
+    padding-top: 188px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    background-color: map-get($map: $theme-colors, $key: 'secondary');
+    width: 100%;
+    height: 100vh;
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        justify-content: space-between;
+        
+        & .searchbar {
+            margin-bottom: 10vh;
+        }
+    }
+}
+
+.foldDivider {
+    width: 100%;
+    height: auto;
+}
+
+.home-suggestions {
+    margin-top: 150px;
+    margin-bottom: 300px;
+    min-height: 646px;
+
+    &__button {
+        margin-top: 100px;
+    }
+}
+
+
+.home-howto {
+    max-width: 600px;
+
+    &__title {
+        margin-top: 160px;
+        margin-bottom: 0;
+
+        &--main {
+            font-size: map-get($map: $font-sizes, $key: 'x-large');
+            color: map-get($map: $theme-colors, $key: 'primary-dark');
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
+    
+    &__subtitle {
+        color: map-get($map: $theme-colors, $key: 'primary');
+        margin-top: 100px;
+    }
+
+    & p {
+        text-align: center;
+    }
+}

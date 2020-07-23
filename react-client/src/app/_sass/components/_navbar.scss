@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: $color-white;
+    padding: 0;
+    padding-left: 30px;
+    height: 60px;
+    position: relative;
+
+    &__left,
+    &__right {
+        z-index: 1;
+    }
+
+    &__center {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__loginSignup {
+
+        &>*:last-child {
+            margin-right: 30px;
+        }
+    }
+
+    & button {
+        height: 38px;
+    }
+}

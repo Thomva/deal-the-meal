@@ -1,0 +1,24 @@
+$main-transition: all 268ms ease-in-out 0s;
+
+.is-minimized .backoffice .main {
+    margin-left: 0;
+}
+
+.backoffice {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    & .main {
+        margin-left: 286px;
+        width: 100%;
+
+        transition: $main-transition;
+
+        & .body {
+            padding: 136px 0 32px;
+        }
+    }
+}

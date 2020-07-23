@@ -1,0 +1,41 @@
+body {
+    font-family: $font-family-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5, 
+h6 {
+    font-family: $font-family-base;
+    color: map-get($map: $theme-colors, $key: 'dark');
+
+}
+h1 {
+    margin-bottom: 100px;
+    color: map-get($map: $theme-colors, $key: 'dark');
+}
+
+h2 {
+    font-size: map-get($map: $font-sizes, $key: 'h2');
+    font-weight: 500;
+    color: map-get($map: $theme-colors, $key: 'primary-dark');
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: map-get($map: $font-sizes, $key: 'normal');
+    font-weight: bold;
+}
+
+p {
+    font-size: map-get($map: $font-sizes, $key: 'normal');
+    color: map-get($map: $theme-colors, $key: 'dark');
+    line-height: 20px;
+}
+
+input,
+input::placeholder {
+    font-size: map-get($map: $font-sizes, $key: 'normal');
+}

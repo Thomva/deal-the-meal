@@ -1,0 +1,24 @@
+{
+  "name": "deal-the-meal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "http://github.com/thomva/deal-the-meal",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cpy-cli": "^3.1.0",
+    "cross-env": "^7.0.2",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "deploy:heroku": "cd deploy && git add . && git commit -m \"deploy app\" && git push heroku master --force",
+    "build:all": "yarn build:react-client && yarn build:server",
+    "build:react-client": "rimraf ./deploy/client && cd react-client && yarn build && cpy \"**/*.*\" --cwd=build ../../deploy/client --parents",
+    "build:server": "rimraf ./deploy/server && cd server && yarn build && cpy \"**/*.*\" --cwd=dist ../../deploy --parents",
+    "install:all": "yarn install && cd server && yarn install && cd ../react-client && yarn install && cd ../deploy && yarn install",
+    "serve:deploy": "cd deploy && node index.js",
+    "watch:all": "concurrently \"cd server && yarn watch:serve\" \"cd react-client && yarn start\"",
+    "watch": "cd server && yarn watch:serve"
+  },
+  "dependencies": {}
+}

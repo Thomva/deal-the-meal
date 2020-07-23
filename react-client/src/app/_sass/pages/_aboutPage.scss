@@ -1,0 +1,120 @@
+.aboutPage {
+
+    &__title {
+        &--main {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__content {
+        max-width: 600px;
+        margin-bottom: 200px;
+        white-space: pre-line;
+    }
+    
+    &__contactSection {
+        display: grid;
+        grid-template-columns: min-content 400px;
+        gap: 150px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: map-get($map: $theme-colors, $key: 'primary');
+        width: 400px;
+        height: 400px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__generalInfo {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    &__infoElement {
+        display: grid;
+        grid-template-columns: 60px max-content;
+        align-items: center;
+        height: 40px;
+        color: $color-white;
+        margin-bottom: 26px;
+        gap: 20px;
+
+        & .icon {
+            justify-self: center;
+            &--location {
+                width: 30px;
+            }
+
+            &--phone {
+                width: 14px;
+            }
+
+            &--email {
+                width: 40px;
+            }
+        }
+    }
+
+    &__infoText {
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+    }
+
+    &__social {
+        display: grid;
+        width: fit-content;
+        grid-template-columns: repeat(3, min-content);
+        gap: 10px;
+        margin: 0 auto;
+
+        & .icon {
+            &--instagram {
+                margin-left: 5px;
+            }
+
+            &--twitter {
+                margin-left: 6px;
+                font-size: 36px;
+            }
+            
+            &--facebook {
+                font-size: 34px;
+                margin-left: 14px;
+            }
+        }
+    }
+
+    &__socialLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: map-get($map: $theme-colors, $key: 'primary-dark');
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+        background-color: $color-white;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    &__contactForm {
+        display: flex;
+        flex-direction: column;
+
+        & .input {
+
+            &__area {
+                position: relative;
+                margin-bottom: 40px;
+                height: 150px;
+                width: 450px;
+            }
+        }
+    }
+
+}

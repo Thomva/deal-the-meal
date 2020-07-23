@@ -1,0 +1,47 @@
+.icon {
+    width: 40px;
+    box-sizing: content-box;
+
+    &--arrow {
+        width: 20px;
+        padding: 20px;
+        border-radius: 50%;
+    }
+
+    &--menu {
+        padding: 3px;
+
+        &Moving {
+            transition: height 300ms ease-out;
+
+            &Expanded {
+                height: 100px;
+            }
+        }
+    }
+    
+    &--clickable {
+        user-select: none;
+        cursor: pointer;
+    }
+
+    &--turn45 {
+        transform: rotate(45deg);
+    }
+
+    &--turn90 {
+        transform: rotate(90deg);
+    }
+
+    &--turn180 {
+        transform: rotate(180deg);
+    }
+
+    &--turn270 {
+        transform: rotate(270deg);
+    }
+
+    &--hide {
+        opacity: 0;
+    }
+}

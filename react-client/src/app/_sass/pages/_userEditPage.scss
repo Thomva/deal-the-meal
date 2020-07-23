@@ -1,0 +1,38 @@
+.userEdit {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    &__title {
+        margin-top: 200px;
+    }
+
+    &__locationSection {
+        margin-bottom: 200px;
+    }
+
+    &__errorSection {
+        margin-top: 20px;
+    }
+    
+    &__error {
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        color: map-get($map: $theme-colors, $key: 'primary-dark');
+    }
+
+    &__buttonContainer {
+        display: flex;
+        justify-content: space-between;
+
+        &--left {
+
+            & > *:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__mapContainer {
+        height: 400px;
+    }
+}

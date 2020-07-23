@@ -1,0 +1,186 @@
+.messagePage {
+    height: 100vh;
+    padding-top: 140px;
+}
+
+.messageManager {
+    height: 75vh;
+    min-height: 400px;
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+
+    &__side {
+        
+        &--users {
+            margin-right: 10px;
+            overflow-y: auto;
+        }
+        
+        &--chat {
+            overflow: hidden;
+            width: 60vw;
+            min-width: 400px;
+            max-width: 600px;
+            background-color: map-get($map: $theme-colors, $key: 'secondary');
+            border: 2px solid map-get($map: $theme-colors, $key: 'secondary');
+        }
+    }
+
+    &__conversationButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 70px;
+        background-color: map-get($map: $theme-colors, $key: 'secondary');
+        color: map-get($map: $theme-colors, $key: 'primary');
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        font-weight: 500;
+        margin-bottom: 10px;
+        user-select: none;
+        cursor: pointer;
+        border-radius: 2px;
+
+        &--selected {
+            background-color: map-get($map: $theme-colors, $key: 'primary');
+            color: $color-white;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__chatTop {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__itemLink {
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-white;
+        height: 60px;
+        width: 100%;
+        user-select: none;
+        cursor: pointer;
+        box-shadow: map-get($map: $theme-colors, $key: 'shadow-primary') 0 10px 20px;
+
+        &Center {
+            display: flex;
+        }
+
+        &User {
+            color: map-get($map: $theme-colors, $key: 'primary');
+        }
+
+        &Item {
+            font-weight: 500;
+            margin-left: 4px;
+            color: map-get($map: $theme-colors, $key: 'dark');
+        }
+
+        &Icon {
+            position: absolute;
+            right: 0;
+            width: 6px;
+            padding: 0;
+            padding-right: 20px;
+        }
+    }
+
+    &__reviewLink {
+        position: absolute;
+        bottom: -40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: map-get($map: $theme-colors, $key: 'primary');
+        width: 200px;
+        height: 40px;
+        color: $color-white;
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        font-weight: 500;
+        border-radius: 0 0 8px 8px;
+        user-select: none;
+        cursor: pointer;
+        box-shadow: map-get($map: $theme-colors, $key: 'shadow-primary') 0 10px 20px;
+    }
+
+    &__chatMid {
+        height: calc(100% - 60px - 60px);
+        overflow-y: auto;
+    }
+    
+    &__messageContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+        padding-top: 80px;
+        min-height: 100%;
+    }
+
+    &__chatMessage {
+        background-color: $color-white;
+        padding: 10px;
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        color: map-get($map: $theme-colors, $key: 'dark');
+        width: fit-content;
+        max-width: 400px;
+        border-radius: 8px;
+        line-height: 18px;
+        margin-top: 10px;
+        margin-right: 40px;
+
+        &--own {
+            color: $color-white;
+            background-color: map-get($map: $theme-colors, $key: 'primary');
+            align-self: flex-end;
+            margin-right: 0;
+            margin-left: 40px;
+        }
+    }
+
+    &__sendBox {
+        display: flex;
+        align-items: flex-end;
+        background-color: $color-white;
+        height: 60px;
+        padding-left: 20px;
+
+        & .input {
+            max-width: 600px;
+            margin: 0;
+            margin-bottom: 20px;
+            
+            &__field {
+                margin: 0;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    &__sendButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 70px;
+        width: 70px;
+        height: 60px;
+        background-color: map-get($map: $theme-colors, $key: 'primary');
+        border-radius: 2px;
+        user-select: none;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    &__sendIcon {
+        width: 30px;
+    }
+}

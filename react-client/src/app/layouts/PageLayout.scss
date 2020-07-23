@@ -1,0 +1,9 @@
+@import '../_sass/abstracts/index';
+
+$page-footer-border: 2px solid #000;
+
+.page-footer {
+    margin-top: $grid-gutter-width; 
+    padding-top: ($grid-gutter-width / 2);
+    border-top: $page-footer-border;
+}

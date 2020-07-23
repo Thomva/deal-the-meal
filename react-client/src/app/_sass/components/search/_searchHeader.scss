@@ -1,0 +1,24 @@
+.searchHeader {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($map: $theme-colors, $key: 'secondary');
+    height: 60px;
+    top: 60px;
+    width: 100%;
+    z-index: 9;
+
+    & .searchbar {
+        height: 40px;
+
+        & .button {
+            height: 40px;
+            font-size: map-get($map: $font-sizes, $key: 'medium');
+        }
+
+        & .input-text--search {
+            height: 40px;
+        }
+    }
+}

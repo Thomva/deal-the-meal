@@ -1,0 +1,26 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $color-white;
+    
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+a {
+    scroll-behavior: smooth;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+    // outline: 2px solid map-get($map: $theme-colors, $key: 'primary');
+}

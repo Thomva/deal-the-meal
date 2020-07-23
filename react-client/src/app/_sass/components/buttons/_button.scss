@@ -1,0 +1,79 @@
+.button {
+    background-color: map-get($theme-colors, 'primary');
+    width: 126px;
+    height: 48px;
+    font-size: map-get($font-sizes, 'normal');
+    font-weight: 500;
+    color: map-get($theme-colors, 'dark');
+    border-radius: 2px;
+    border: none;
+    color: $color-white;
+
+    &--light {
+        background-color: map-get($theme-colors, 'secondary');
+        color: map-get($theme-colors, 'primary');
+    }
+
+    &--search {
+        height: 60px;
+        width: 200px;
+        font-size: map-get($map: $font-sizes, $key: 'h2');
+    }
+
+    &--mt100 {
+        margin-top: 100px;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+
+
+    &--action {
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        z-index: 1;
+        padding: 0;
+
+        & .icon {
+            width: 20px;
+
+            &--edit {
+                width: 6px;
+            }
+
+            &--eyeShow,
+            &--eyeHide {
+                width: 24px;
+            }
+
+            &--delete {
+                width: 14px;
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.actionButtons {
+    position: absolute;
+    gap: 10px;
+    right: 10px;
+    top: -20px;
+    
+    &--triple {
+        display: grid;
+        grid-template-columns: repeat(3, 40px);
+    }
+
+}

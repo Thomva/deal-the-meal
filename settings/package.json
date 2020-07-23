@@ -1,0 +1,40 @@
+{
+  "name": "deal-the-meal",
+  "version": "1.0.0",
+  "description": "Platform for sharing food.",
+  "main": "index.js",
+  "author": "Thomva",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "chalk": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.5",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "slug": "^2.1.1",
+    "swagger-express-ts": "^1.0.1",
+    "swagger-jsdoc": "^3.5.0",
+    "swagger-ui-express": "^4.1.3",
+    "winston": "^3.2.1"
+  },
+  "engines": {
+    "node": "12.16.1",
+    "yarn": "1.17.3"
+  },
+  "scripts": {
+    "start": "node index.js"  
+  }
+}

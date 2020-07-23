@@ -1,0 +1,65 @@
+$color-black: #222;
+// $color-white: #f1f1f1;
+$color-purple: #7E57C5;
+$color-green: #5AB946;
+$color-red: #ED0034;
+$color-orange: #F58732;
+$color-blue: #00A5D9;
+
+$color-neutralblue-dark: #111e2a;
+$color-neutralblue-dark-shadow: rgba(#111e2a, .1);
+$color-neutralblue: #8b9baa;
+$color-white: #ffffff;
+$color-mimosa: #f5f2ca;
+$color-burntorange-shadow: rgba(#ff6c31, 0.1);
+$color-burntorange-light: rgba(#ff6c31, 0.5);
+$color-burntorange: #ff6c31;
+$color-burntorange-dark: #b24116;
+
+$font-family-Roboto: 'Roboto', sans-serif;
+$font-family-Montserrat: 'Montserrat', sans-serif;
+
+$font-family-Rubik: 'Rubik', sans-serif;
+
+$font-sizes: (
+  'small': 10px,
+  'normal': 14px,
+  'medium': 18px,
+  'h2': 26px,
+  'large': 40px,
+  'x-large': 80px,
+  // "normal": 14pt,
+);
+
+$theme-colors: (
+  'primary-light': $color-burntorange-light,
+  'primary': $color-burntorange,
+  'primary-dark': $color-burntorange-dark,
+  'secondary': $color-mimosa,
+  'dark': $color-neutralblue-dark,
+  'grey': $color-neutralblue,
+  'danger': $color-burntorange-dark,
+  'shadow-grey': $color-neutralblue-dark-shadow,
+  'shadow-primary': $color-burntorange-shadow,
+);
+
+$font-family-base: $font-family-Rubik;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 48px !default;
+$grid-row-columns: 6 !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1360px
+) !default;

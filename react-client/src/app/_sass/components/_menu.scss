@@ -1,0 +1,46 @@
+.menu {
+    height: 100%;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        margin-left: 20px;
+        height: 100%;
+        width: 76px;
+        cursor: pointer;
+        transition: background-color 200ms ease-out;
+
+        & .icon {
+            width: 26px;
+        }
+
+        &--open {
+            background-color: map-get($map: $theme-colors, $key: 'primary');
+        }
+    }
+
+    &__list {
+        position: absolute;
+        right: 0;
+        width: 260px;
+        background-color: map-get($map: $theme-colors, $key: 'primary');
+        border-radius: 4px 0 4px 4px;
+        user-select: none;
+        box-shadow: map-get($map: $theme-colors, $key: 'shadow-grey') 0 20px 40px;
+        transition: right 300ms ease-out;
+
+        &--hide {
+            right: -260px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+    }
+}

@@ -1,0 +1,13 @@
+.resultsPage{
+    padding-top: 58px;
+
+    &__searchContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 260px;
+        background-color: map-get($map: $theme-colors, $key: 'secondary');
+        margin-bottom: 60px;
+    }
+}

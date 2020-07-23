@@ -1,0 +1,17 @@
+.ratingStars {
+    display: grid;
+    width: 90px;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: 14px;
+    height: fit-content;
+    gap: 4px;
+    align-items: center;
+
+    & > * {
+        width: 14px;
+
+        & > * {
+            width: 100%;
+        }
+    }
+}

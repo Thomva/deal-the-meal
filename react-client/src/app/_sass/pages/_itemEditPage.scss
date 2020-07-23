@@ -1,0 +1,189 @@
+.itemEdit {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    &__title {
+        margin-top: 200px;
+    }
+
+    &__uploadZone {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 110px;
+        background-color: map-get($map: $theme-colors, $key: 'secondary');
+        margin-bottom: 50px;
+
+        &Icon {
+            position: absolute;
+        }
+
+        & input {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__photoOrder {
+        display: flex;
+    }
+    
+    &__photoElement {
+        display: grid;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-right: 40px;
+    }
+
+    &__photoNumber {
+        width: fit-content;
+        font-size: map-get($map: $font-sizes, $key: 'h2');
+        color: map-get($map: $theme-colors, $key: 'primary');
+        font-weight: 500;
+        margin: 0 auto;
+        user-select: none;
+    }
+
+    &__photoDraggable {
+        position: relative;
+        z-index: 9;
+        overflow: hidden;
+        border-radius: 2px;
+        box-shadow: map-get($map: $theme-colors, $key: 'shadow-grey') 0 10px 20px;
+        width: fit-content;
+        cursor: grab;
+        user-select: none;
+    }
+
+    &__photo {
+        width: 120px;
+        height: 120px;
+        object-position: center;
+        object-fit: cover;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &__deleteButton {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        pointer-events: all;
+
+        & .icon {
+            width: 10px;
+        }
+    }
+
+    &__photoBottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: map-get($map: $theme-colors, $key: 'primary');
+        height: 35px;
+        user-select: none;
+        pointer-events: none;
+
+        & .icon {
+            width: 20px;
+        }
+    }
+
+    &__categories {
+        width: 100%;
+
+    }
+
+    &__priceInput {
+        display: flex;
+        align-items: center;
+        width: 100px;
+
+        &--disabled {
+            user-select: none;
+            pointer-events: none;
+            opacity: .5;
+        }
+
+        & .input {
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+
+            &__number {
+                width: 100%;
+            }
+
+            &__label {
+                position: absolute;
+                margin: 0;
+                right: -14px;
+            }
+        }
+    }
+
+    &__priceCurrency {
+        margin-right: 10px;
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        font-weight: 500;
+    }
+
+    & .input {
+        max-width: initial;
+        
+        &__checkboxGroup {
+            display: grid;
+            grid-template-columns: calc(50% - 20px) 50%;
+            gap: 20px;
+
+            & .input {
+                margin: 0;
+            }
+        }
+    }
+
+    &__priceSection {
+        margin-bottom: 200px;
+    }
+
+    &__errorSection {
+        margin-top: 20px;
+    }
+    
+    &__error {
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        color: map-get($map: $theme-colors, $key: 'primary-dark');
+
+        &--upload {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            left: 240px;
+            width: fit-content;
+
+            & .icon {
+                width: 6px;
+                padding: 0;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    &__errorMessage {
+        &--upload {
+            width: max-content;
+            max-width: 200px;
+            color: map-get($map: $theme-colors, $key: 'primary-dark');
+            font-size: map-get($map: $font-sizes, $key: 'normal');
+            font-weight: bold;
+        }
+    }
+}

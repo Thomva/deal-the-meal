@@ -1,0 +1,99 @@
+.imageGallery {
+    width: 600px;
+
+    &__selected {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 340px;
+        border-radius: 2px;
+        background-color: map-get($map: $theme-colors, $key: 'dark');
+
+        &Img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__navigator {
+        display: flex;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    &__thumbnails {
+        display: flex;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+
+    &__navigatorLeft,
+    &__navigatorRight{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: $color-white;
+        top: 0;
+        min-width: 50px;
+        height: 100px;
+        padding: 0 20px;
+        cursor: pointer;
+        
+        & .icon--arrow {
+            width: 10px;
+            z-index: 5;
+            padding: 0;
+        }
+    }
+
+    &__navigatorLeft {
+        justify-content: flex-start;
+        left: -20px;
+    }
+
+    &__navigatorRight {
+        justify-content: flex-end;
+        right: -20px;
+    }
+
+    &__thumbnail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        min-width: 100px;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border-radius: 2px;
+        cursor: pointer;
+        
+        transition: transform 100ms ease-out;
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+        
+        &--selected {
+            border: 4px solid map-get($map: $theme-colors, $key: 'primary');
+            cursor: default;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+    
+    &__thumbnailImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

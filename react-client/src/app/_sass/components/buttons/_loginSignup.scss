@@ -1,0 +1,11 @@
+.loginSignup {
+    height: 38px;
+
+    & > * {
+        height: 100%;
+    }
+
+    &>*:first-child {
+        margin-right: 10px;
+    }
+}

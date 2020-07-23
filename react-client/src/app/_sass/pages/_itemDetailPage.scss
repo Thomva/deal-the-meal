@@ -1,0 +1,132 @@
+.itemDetail {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    grid-template-columns: repeat(2, max-content);
+    gap: 100px;
+    height: 100vh;
+
+
+    &__side {
+        width: fit-content;
+        height: 60vh;
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__top,
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        max-width: 400px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    &__categoryContainer {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__category {
+        margin-right: 10px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 10px;
+        width: 100%;
+        min-height: 100px;
+    }
+
+    &__timeAgo {
+        color: map-get($map: $theme-colors, $key: 'primary');
+        margin: 0;
+    }
+
+    &__infoCard {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        background-color: map-get($map: $theme-colors, $key: 'secondary');
+        font-size: map-get($map: $font-sizes, $key: 'small');
+        font-weight: 200;
+        cursor: pointer;
+
+        transition: transform 100ms ease-out;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__priceContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 4px);
+        min-width: 96px;
+        max-width: 200px;
+        width: 15vw;
+        margin-left: 2px;
+        background-color: $color-white;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: center;
+        font-size: map-get($map: $font-sizes, $key: 'h2');
+        width: fit-content;
+        font-weight: 500;
+    }
+
+    &__userInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 20px;
+
+        &--right {
+            display: flex;
+            align-items: center;
+
+            & .icon--location {
+                width: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__userName {
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    &__userRating {
+
+        &--hide {
+            opacity: 0;
+        }
+    }
+
+    &__userLocation {
+        font-size: map-get($map: $font-sizes, $key: 'normal');
+    }
+
+    &__messageBtn {
+        margin-top: 20px;
+    }
+}
