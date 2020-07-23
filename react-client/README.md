@@ -1,4 +1,4 @@
-# Deal th Meal
+# Deal the Meal
 
 School: Arteveldehogeschool
 Afstudeerrichting: Grafische & Digitale Media - Multimediaproductie - New Media Development
